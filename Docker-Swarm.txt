@@ -1,1 +1,42 @@
-Docker swarm 
+Docker Swarm| Step by Step | What is Docker Swarm | How to create Docker Swarm
+------------------------------------------------------------------------------
+youtube link = https://www.youtube.com/watch?v=bU2NNFJ-UXA
+Step 1: create Docker machine(act as node for docker swarm)
+        create one machine as manager and other sa workers
+        install docker-machine command= curl -L https://github.com/docker/machine/releases/download/v0.16.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine && chmod +x /tmp/docker-machine && sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
+        check docker-machine version=
+        
+        command =: docker-machine create --driver virtualbox manager1
+        Error with pre-create check: "VBoxManage not found. Make sure VirtualBox is installed and VBoxManage is in the path"
+        install VirtualBox
+        command=:sudo apt-get install virtualbox
+        create one manager and other worker
+        
+step 2: check machine created successfully
+        command =: docker-machine ls
+        command =: docker-machine ip manager1
+        
+step 3: SSH(connect)to docker machine
+        command =: docker-machine ssh manager1
+       
+step 4: initialize docker swarm
+        command =: docker swarm init --advertise-addr managerip
+        command =: docker node ls (command only will work in manager not in worker)
+      
+step 5 : join worker in swarm
+        command =: docker swarm join-token worker (wiil give command to join swarm as worker)
+        command =: docker swarm join-token manager1 (wiil give command to join swarm as manager1)
+        
+step 6: on manager runn standard command 
+       command =: docker info   (will give number of manager , node etc)
+       now check docker swarm command options
+       command =: docker swarm
+       
+step 7:
+        
+     
+      
+  
+        
+
+
