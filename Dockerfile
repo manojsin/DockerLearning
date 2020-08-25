@@ -1,9 +1,7 @@
-FROM openjdk:8-jdk-alpine
-RUN addgroup -S spring && adduser -S spring -G spring
-USER spring:spring
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM openjdk:8
+EXPOSE 8080
+ADD target/spring-boot-docker.jar spring-boot-docker.jar
+ENTRYPOINT ["java","-jar","spring-boot-docker.jar"]
 
-# sudo docker build -t application_name:latest .
-# sudo docker run -p 8085:8080  3e7a42efec8c
+# sudo docker build -t spring-boot-docker.jar .
+#  sudo docker run -p 9090:8080 spring-boot-docker.jar
