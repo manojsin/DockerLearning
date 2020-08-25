@@ -1,0 +1,29 @@
+Basic Docker-compose learning step-by-step
+
+1. docker-compose -v  (check version)
+2. docker-compose version
+3. docker-compose --version
+
+step 2 : create docker-compose file on any location in sysytem
+       sudo docker-compose.yml
+       version: "2.0"
+services:
+         web:
+             image: nginx
+             ports:
+             - 9090:80
+
+         database:
+                  image: redis
+       
+steps3 : check the validaty of file by command
+        docker-compose config
+        
+ step 4 run docker-compose.yml using command
+       sudo docker-compose up -d  (-d detach mode)
+       sudo docker-compose down  (stop running)
+       
+ step 5: scal application(create multiple instance) command
+ 
+       sudo docker-compose scale database=4
+        
