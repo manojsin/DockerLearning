@@ -6,14 +6,14 @@ pipline{
      stages{
           stage('Build Docker Image'){
                 steps{
-                    sh "docker build -t testingmanoj/manoj:${DOCKER_TAG}"
+                    sh "docker build -t testingmanoj/manoj:${DOCKER_TAG} ."
                 }
            }
      }
 }
 
 def getDockerTag(){
-   def tag=sh script: 'git rev-parse HEAD',retirnStdout:true
+   def tag=sh script: 'git rev-parse HEAD',returnStdout:true
    return tag
 
 }
