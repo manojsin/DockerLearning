@@ -22,3 +22,9 @@ $ sudo systemctl restart jenkins.service
    
 docker pipline script reference
 https://dzone.com/articles/building-docker-images-to-docker-hub-using-jenkins
+
+##############codekr plugin in jenkind################
+
+1.docker plugin
+2.docker pipeline
+3.docker build step
