@@ -15,7 +15,10 @@ $ sudo systemctl restart jenkins.service
 1.pull jenkins docker image from docker hub
    sudo docker pull jenkins/jenkins
 2. run jenkins in docker container
-   docker run -p 8080:8080 --name=jenkins-master jenkins/jenkins
+   sudo docker run -p 8080:8080 --name=jenkins-master jenkins/jenkins
+   
+   sudo docker rm jenkins-master
+
    
 docker pipline script reference
 https://dzone.com/articles/building-docker-images-to-docker-hub-using-jenkins
