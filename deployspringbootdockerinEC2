@@ -2,3 +2,5 @@ EC2 URL =https://www.youtube.com/watch?v=1fnPCWBikYQ
 ECS URL=https://www.youtube.com/watch?v=z7_LdCVnCRU
 
 use always ecs for container image service
+
+aws ECR =https://www.youtube.com/watch?v=yWc1I56-UII
