@@ -20,3 +20,6 @@ Prerequisites:
 # rabbitmqctl set_user_tags radmin administrator
 # rabbitmqctl set_permissions -p / radmin ".*" ".*" ".*"
 7.http://localhost:15672/
+8.stop rabbitmq
+#sudo -u rabbitmq rabbitmqctl stop
+
