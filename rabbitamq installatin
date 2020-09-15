@@ -1,0 +1,22 @@
+install rabbitma in ubuntu 16.04
+
+url=https://linoxide.com/ubuntu-how-to/install-setup-rabbitmq-ubuntu-16-04/
+command
+Prerequisites:
+# apt-get update
+# apt-get upgrade
+2. get main dependencies of RabbitMQ such as Erlang
+# apt-get install -y erlang
+3.Installing RabbixMQ Server on Ubuntu 16.04
+# apt-get install rabbitmq-server
+4.Starting RabbixMQ Services:
+# systemctl enable rabbitmq-server
+# systemctl start rabbitmq-server
+# systemctl status rabbitmq-server
+5.Enabling RabbitMQ Management console
+# rabbitmq-plugins enable rabbitmq_management
+6. RabbitMQ Management console from our web browser, available on HTTP port 15672 by default. You can also create new admin user using below commands.
+# rabbitmqctl add_user radmin radmin
+# rabbitmqctl set_user_tags radmin administrator
+# rabbitmqctl set_permissions -p / radmin ".*" ".*" ".*"
+7.http://localhost:15672/
